@@ -78,6 +78,26 @@ const listaNombres3 = (nombre, edad) =>{
 
 };
 
+var ID = function generarID(){
+    var generado = Math.random();
+    return generado;
+};
+
+var arreglo = [
+        {
+            valorI: "informacion",
+            valorII: true
+        },
+        {
+            infoPersonal: "nombre de usuario",
+            pw: "contraseña1341_$"
+        }, ["String","String", 312, false], "string_arreglo", ID
+];
+
+
+
+let obtenerValor = arreglo.map(valorBuscado=>(console.log(valorBuscado)));
+
 const listaNombres4 = nombre =>{
 
 };
