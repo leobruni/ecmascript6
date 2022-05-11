@@ -124,3 +124,96 @@ promesa()
 
 // Clases, Modulos Generadores
 
+// Clases
+
+class calculadora {
+    constructor(){
+        this.valorA = '';
+        this.valorB = 2;
+    }
+    sum(valora, valorb){
+        this.valorA = valora;
+        this.valorB = valorb;
+        return this.valorA+this.valorB;
+    }
+}
+
+var calculeitor = new calculadora();
+console.log(calculeitor.sum(3,4));
+
+//Importar los modulos
+
+
+
+const hello = require('./module.js');// De esta manera tendriamos todas las funciones disponibles(importadas)
+console.log(hello());
+
+saludar = console.log(hello());
+
+
+//Generadores: funcion especial que retorna valores
+
+function* helloWorld(){ //function* Para crear la funcion generadora
+    if (true) {
+        yield 'Hola, '; //Equivale al return de funciones normales
+    }
+    if (true) {
+        yield 'mundo'; // Los valores retornados con yield se contabilizan
+    }
+}
+
+const generatorHola = helloWorld();
+console.log(generatorHola.next().value);//Devuelve hola
+console.log(generatorHola.next().value);//Devuelve mundo
+console.log(generatorHola.next().value);//Devuelve undefined
+
+
+// Buscar el valor exacto dentro de un arreglo
+let num = [1,2,3,4,5,6,7,7,7,7,7,555,555];
+
+if (num.includes(9)) {
+    console.log('Si se encuentra el valor 7')
+} else {
+    console.log('No se encuentra');
+}
+
+// Elevar a la potencia alguna variable
+let base = 3;
+let exponente = 2;
+let resultado = base ** exponente;
+console.log(resultado);
+
+
+const data ={
+    front:'Alej',
+    back: 'Rel',
+    fronto: 'Si?',
+    design: 'Kike'
+};
+
+//Tranformar este objeto en una matriz. 
+const entries = Object.entries(data);
+console.log(entries);
+console.log(entries[3][1]);
+
+//Si queremos saber cuantos elementos posee nuestro arreglo ahora es posible con length
+console.log(entries.length);
+
+
+
+const data2 ={
+    front:'Alej2',
+    back: 'Rel2',
+    fronto: 'Si?2',
+    design: 'Kike2'
+};
+
+//Devolver los valores de un objeto dentro de un arreglo
+const values = Object.values(data2);
+console.log(values);
+console.log(values.length);
+
+
+//Padding en cadenas
+const cadenaN = '123456789';
+console.log(cadenaN.padStart(13,'/12/'));
