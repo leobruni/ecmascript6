@@ -171,7 +171,7 @@ console.log(generatorHola.next().value);//Devuelve undefined
 // Buscar el valor exacto dentro de un arreglo
 let num = [1,2,3,4,5,6,7,7,7,7,7,555,555];
 
-if (num.includes(9)) {
+if (num.includes(7)) {
     console.log('Si se encuentra el valor 7')
 } else {
     console.log('No se encuentra');
@@ -188,7 +188,7 @@ const data ={
     front:'Alej',
     back: 'Rel',
     fronto: 'Si?',
-    design: 'Kike'
+    nombreAtributo: 'Kike'
 };
 
 //Tranformar este objeto en una matriz. 
